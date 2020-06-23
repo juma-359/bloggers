@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="/update_blog/{{blog.id}}" method="POST">
+    <div class="form-group">
+        <label for="blog">Blog</label>
+        <textarea class="form-control" name="blog" id="blog" rows="3" aria-label="pitch">{{pitch.pitch}}</textarea>
+    </div>
+    <br>
+    <label for="title">Title</label>
+    <input class="form-control" type="text" aria-label="title" name="title" id="title" value="{{blog.title}}">
+    <br>
+    <input type="submit" value="Save">
+</form>
+{% endblock content %}
+    
